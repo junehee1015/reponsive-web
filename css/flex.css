@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 14px;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+img {
+    display: block;
+}
+
+
+header {
+    width: 100%;
+    height: 10vh;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > a {
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0 30px;
+}
+header div {
+    height: 10vh;
+    flex-grow: 1;
+}
+header ul {
+    display: flex;
+}
+header ul li a {
+    padding: 30px;
+    display: block;
+}
+header .fa-align-justify {
+    display: none;
+    font-size: 30px;
+    padding: 0 30px;
+    cursor: pointer;
+    padding: 30px;
+}
+
+
+.container {
+    display: flex;
+}
+nav {
+    flex: 1 1 15%;
+    height: 80vh;
+    border-right: 1px solid #000;
+    padding: 30px;
+}
+nav h1 {
+    font-size: 18px;
+    text-decoration: underline;
+}
+.keyword {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.item {
+    border: 1px solid #000;
+    padding: 4px;
+    margin: 5px;
+    font-size: 13px;
+}
+section {
+    flex: 1 1 70%;
+    height: 80vh;
+    padding: 30px;
+}
+.contents {
+    display: flex;
+    flex-wrap: wrap;
+}
+.img-item {
+    width: 31.3%;
+    background: url('../img/flex.jpg') no-repeat center center;
+    background-size: cover;
+    margin: 0 1%;
+    margin-bottom: 3vh;
+    height: 22.5vh;
+}
+aside {
+    flex: 1 1 15%;
+    height: 80vh;
+    border-left: 1px solid #000;
+    padding: 30px;
+}
+aside p {
+    margin-top: 20px;
+}
+
+
+footer {
+    width: 100%;
+    height: 10vh;
+    border-top: 1px solid #000;
+    text-align: center;
+    line-height: 10vh;
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    nav {
+        border: none;
+        border-bottom: 1px solid #000;
+    }
+    aside {
+        border: none;
+        border-top: 1px solid #000;
+    }
+    .img-item {
+        margin-bottom: 2vh;
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+    }
+    header ul {
+        display: none;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+    }
+    header ul li a:hover {
+        background-color: #ccc;
+    }
+    header .fa-align-justify {
+        display: inline-block;
+    }
+    header .menu {
+        width: 100%;
+        text-align: center;
+        background-color: #fff;
+        opacity: 0.9;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 100%;
+    }
+    .img-item {
+        width: 48%;
+    }
+
+    nav {
+        order: 2;
+    }
+    section {
+        order: 3;
+    }
+    aside {
+        order: 1;
+        background-color: #000;
+        color: #fff;
+    }
+}
